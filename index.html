@@ -1,96 +1,205 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- Fonte Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<title>Banner CNN – Portal KartWeb</title>
+<title>Portal KartWeb — Banner CNN</title>
 
 <style>
-
-/* RESET */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background: #000;
-  overflow: hidden;
+  color: #fff;
 }
 
-/* CONTAINER CENTRALIZADO */
-.container {
+/* TOPO — PORTAL CONTA COM APOIO */
+.topo {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* FAIXA SUPERIOR CNN */
-.faixa-topo {
   background: #FF6400;
-  color: #FFF;
+  padding: 10px 20px;
   font-weight: 700;
-  padding: 8px 20px;
-  font-size: 18px;
-  text-transform: uppercase;
+  font-size: 20px;
 }
 
-/* FAIXA BRANCA */
-.faixa-branca {
-  background: #FFF;
+/* LINHA DE MANCHETE (CNN) */
+.headline-area {
+  background: #fff;
   color: #000;
-  padding: 12px 20px;
-  position: relative;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* TÍTULO OU CARROSSEL */
-.area-centro {
-  flex: 1;
-  padding: 0 20px;
+.headline-text {
+  font-size: 26px;
+  font-weight: 800;
 }
 
-/* LOGO LADO DIREITO */
-.logo-direita img {
-  height: 44px;
-  width: auto;
-}
-
-/* RELÓGIO */
-.relogio {
-  font-size: 20px;
+/* HORA */
+.hora {
+  font-size: 22px;
   font-weight: 700;
-  margin-right: 20px;
 }
 
-/* TICKER CNN INFERIOR */
+/* LOGO */
+.logo {
+  height: 50px;
+  margin-left: 15px;
+}
+
+/* TICKER (faixa preta fina) */
 .ticker {
-  background: #000;
-  color: #FFF;
   width: 100%;
-  padding: 6px 0;
+  background: #000;
   overflow: hidden;
-  white-space: nowrap;
   border-top: 2px solid #FF6400;
+  padding: 5px 0;
+  white-space: nowrap;
 }
 
 .ticker span {
   display: inline-block;
   padding-left: 100%;
-  animation: ticker 20s linear infinite;
-  font-size: 16px;
+  animation: ticker 18s linear infinite;
+  font-size: 17px;
 }
 
 @keyframes ticker {
-  0% { transform: translateX(0%); }
+  0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
 
+/* CARROSSEL DE CLIENTES */
+.banner-carousel {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* CENTRALIZAÇÃO */
+.conteudo {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.titulo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+  color: #fff;
+}
+
+.sub {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #fff;
+}
+
+.mini {
+  font-size: .75rem;
+  opacity: .8;
+}
 </style>
 </head>
 <body>
 
+<!-- TOPO -->
+<div class="topo">PORTAL CONTA COM APOIO</div>
+
+<!-- HEADLINE CNN -->
+<div class="headline-area">
+  <div class="headline-text">TÍTULO DA SUA MATÉRIA VEM AQUI DO JEITO QUE VOCÊ QUISER</div>
+  <div style="display:flex; align-items:center; gap:15px;">
+    <div class="hora" id="hora"></div>
+    <img class="logo" src="https://static.wixstatic.com/media/74713a_efac346c04e44ca99367a8c09934c5e1~mv2.png/v1/fill/w_111,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logotipobranco.png">
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span>RESULTADOS DO KART • ANÚNCIOS • PATROCINADORES • NOTÍCIAS • KARTWEB • RESULTADOS •</span>
+</div>
+
+<!-- CARROSSEL DE CLIENTES -->
+<div class="banner-carousel">
+  
+  <!-- PARALEGO -->
+  <a class="slide active" href="https://www.paralegoracing.com.br" target="_blank">
+    <div class="conteudo">
+      <img src="https://www.paralegoracing.com.br/media/tmp/webp/skin/frontend/paralego/2017/images/logo.webp" height="70">
+      <div>
+        <h2 class="titulo">Paralego Racing</h2>
+        <p class="sub">Alta performance dentro e fora das pistas</p>
+        <small class="mini">Visite nosso site</small>
+      </div>
+    </div>
+  </a>
+
+  <!-- MEGA KART -->
+  <a class="slide" href="https://www.megakart.com.br" target="_blank">
+    <div class="conteudo">
+      <div>
+        <h2 class="titulo">Mega Kart</h2>
+        <p class="sub">Tecnologia para campeões</p>
+        <small class="mini">Visite nosso site</small>
+      </div>
+      <img src="https://images.tcdn.com.br/img/img_prod/476141/689605581db68_1.png" height="110">
+    </div>
+  </a>
+
+  <!-- RBC -->
+  <a class="slide" href="https://www.instagram.com/rbcmotorsport/" target="_blank">
+    <img src="https://static.wixstatic.com/media/74713a_59409fee566a4c33b01f0589c053e4fd~mv2.jpg" style="width:100%; height:100%; object-fit:cover;">
+  </a>
+
+</div>
+
+<script>
+/* Relógio */
+function atualizarHora() {
+  const agora = new Date();
+  document.getElementById("hora").innerText =
+    agora.getHours().toString().padStart(2,'0') + ":" +
+    agora.getMinutes().toString().padStart(2,'0');
+}
+setInterval(atualizarHora, 1000);
+atualizarHora();
+
+/* Carrossel */
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 6000);
+</script>
+
+</body>
+</html>
