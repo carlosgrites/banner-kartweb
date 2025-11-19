@@ -1,92 +1,185 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- CONTAINER GERAL CNN -->
-<div id="cnn-style"
-     style="width:100%; background:#fff; font-family:Poppins, sans-serif; overflow:hidden; position:relative;">
+<div id="cnn-kartweb" style="font-family:'Poppins',sans-serif; width:100%; overflow:hidden;">
 
-    <!-- TARJA SUPERIOR (BREAKING NEWS) → EMPRESAS APOIADORAS -->
+    <!-- FAIXA SUPERIOR CURTA -->
     <div style="
-        width:100%; height:22px;
         background:#FF6400;
         color:#000;
-        font-size:13px;
-        font-weight:700;
-        display:flex;
-        align-items:center;
-        padding-left:10px;
-        text-transform:uppercase;">
-        Empresas Apoiadoras
+        display:inline-block;
+        padding:4px 12px;
+        font-weight:800;
+        font-size:14px;
+        text-transform:uppercase;
+        margin-top:6px;
+        margin-left:6px;
+    ">
+        EMPRESAS APOIADORAS
     </div>
 
-    <!-- TARJA CENTRAL (MANCHETE CNN) COM CARROSSEL -->
+    <!-- CAIXA BRANCA CNN -->
     <div style="
-        width:100%; height:52px;
-        background:#000;
-        display:flex;
-        align-items:center;
-        padding-left:10px;
-        padding-right:140px;
         position:relative;
-        overflow:hidden;">
+        background:#fff;
+        width:100%;
+        border-top:2px solid #DDD;
+        border-bottom:2px solid #DDD;
+        padding:6px 0;
+        height:120px;       /* ALTURA REDUZIDA PARA NÃO FICAR HORRÍVEL */
+        overflow:hidden;
+    ">
 
-        <!-- CARROSSEL EM 1 LINHA (EXATAMENTE NA LINHA DA MANCHETE CNN) -->
-        <div id="headline-slide" style="
-            white-space:nowrap;
-            display:inline-block;
-            animation:headlineMove 16s linear infinite;
-            font-size:22px;
-            font-weight:700;
-            color:#FFF;">
-            Paralego Racing • Mega Kart • RBC Motorsport • Paragon Ergonomics • Parque Kartódromo de Joinville •
+        <!-- LOGO + RELÓGIO (CANTO DIREITO CNN) -->
+        <div style="position:absolute; right:12px; top:8px; text-align:right;">
+            <img src="https://static.wixstatic.com/media/74713a_efac346c04e44ca99367a8c09934c5e1~mv2.png/v1/fill/w_111,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logotipobranco.png"
+                 style="height:26px; width:auto;">
+            <div id="relogio" style="font-size:13px; font-weight:700; color:#FF6400; margin-top:2px;"></div>
         </div>
 
-        <!-- LOGO + RELÓGIO IGUAL CNN (CANTO SUPERIOR DIREITO DA TARJA CENTRAL) -->
-        <div style="position:absolute; top:6px; right:12px; text-align:right;">
+        <!-- SEU CARROSSEL ORIGINAL, REDUZIDO PARA CABER NO DESIGN CNN -->
+        <div class="banner-carousel" style="
+            width:100%;
+            height:120px;       /* REDUZIDO */
+            position:relative;
+            overflow:hidden;
+            transform:scale(0.75);
+            transform-origin:left top;
+        ">
 
-            <!-- LOGO -->
-            <img src="https://static.wixstatic.com/media/74713a_efac346c04e44ca99367a8c09934c5e1~mv2.png/v1/fill/w_111,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logotipobranco.png"
-                 style="height:28px; width:auto;">
+            <!-- PARALEGO -->
+            <a class="slide faixa-paralego" href="https://www.paralegoracing.com.br" target="_blank">
+                <div class="conteudo">
+                    <img src="https://www.paralegoracing.com.br/media/tmp/webp/skin/frontend/paralego/2017/images/logo.webp">
+                    <div>
+                        <h2 class="titulo">Paralego Racing</h2>
+                        <p class="sub">Alta performance dentro e fora das pistas</p>
+                        <small class="mini">Visite nosso site</small>
+                    </div>
+                </div>
+            </a>
 
-            <!-- RELÓGIO NO ESTILO CNN -->
-            <div id="relogio" style="
-                margin-top:2px;
-                font-size:13px;
-                font-weight:700;
-                color:#FF6400;">
-            </div>
+            <!-- MEGA KART -->
+            <a class="slide faixa-mega" href="https://www.megakart.com.br" target="_blank">
+                <div class="conteudo">
+                    <div>
+                        <h2 class="titulo">Mega Kart</h2>
+                        <p class="sub">Alta performance e tecnologia para campeões</p>
+                        <small class="mini">Visite nosso site</small>
+                    </div>
+                    <img class="mega-img" src="https://images.tcdn.com.br/img/img_prod/476141/689605581db68_1.png">
+                </div>
+                <span class="publicidade">Publicidade</span>
+            </a>
+
+            <!-- RBC -->
+            <a class="slide faixa-rbc" href="https://www.instagram.com/rbcmotorsport/" target="_blank">
+                <img src="https://static.wixstatic.com/media/74713a_59409fee566a4c33b01f0589c053e4fd~mv2.jpg">
+                <span class="publicidade">Publicidade</span>
+            </a>
+
+            <!-- PARAGON -->
+            <a class="slide faixa-paragon" href="https://paragonergonomics.wixsite.com/paragon" target="_blank">
+                <div class="conteudo">
+                    <img src="https://static.wixstatic.com/media/666b33_1314a323ff124791ac2f236e4e270152~mv2.jpg">
+                    <div class="texto">
+                        <h2 class="titulo">Paragon Ergonomics</h2>
+                        <p class="sub">Assentos esportivos de alta performance</p>
+                        <small class="mini">Visite nosso site</small>
+                    </div>
+                    <img src="https://static.wixstatic.com/media/74713a_36b6346a8e5849578f7dd20275fc6ccc~mv2.jpg">
+                </div>
+                <span class="publicidade">Publicidade</span>
+            </a>
+
+            <!-- PARQUE KARTÓDROMO -->
+            <a class="slide faixa-parque" href="https://wa.me/5547988282163" target="_blank">
+                <div class="conteudo">
+                    <img src="https://parquekartodromo.com/img/Marca-Principal-logo-logotipo-vetor-Parque_Kartodromo.svg">
+                    <div>
+                        <h2 class="titulo">Parque Kartódromo de Joinville</h2>
+                        <p class="sub">A nova casa do kart catarinense</p>
+                        <small class="mini">Fale pelo WhatsApp</small>
+                    </div>
+                </div>
+                <span class="publicidade">Publicidade</span>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- FAIXA DE ROLAGEM CNN -->
+    <div style="
+        background:#000;
+        color:#FFF;
+        height:26px;
+        display:flex;
+        align-items:center;
+        position:relative;
+        overflow:hidden;
+        font-size:14px;
+        font-weight:600;
+    ">
+        <div id="ticker" style="white-space:nowrap; position:absolute;">
+            RESULTADOS DO KART • NOTÍCIAS • EVENTOS • ANÚNCIOS • KARTWEB •
         </div>
     </div>
 
-    <!-- TARJA INFERIOR (EXATAMENTE IGUAL CNN, COLADA EMBAIXO) -->
+    <!-- FAIXA INFERIOR CURTA -->
     <div style="
-        width:100%; height:18px;
-        background:#1a1a1a;
+        background:#000;
         color:#FFF;
-        font-size:12px;
-        display:flex;
-        align-items:center;
-        padding-left:10px;">
+        display:inline-block;
+        padding:4px 12px;
+        font-size:13px;
+        font-weight:600;
+        margin-top:2px;
+        margin-left:6px;
+    ">
         @portal kartweb
     </div>
+
 </div>
 
-<!-- ANIMAÇÃO CNN -->
-<style>
-@keyframes headlineMove {
-    0%   { transform:translateX(100%); }
-    100% { transform:translateX(-100%); }
-}
-</style>
-
-<!-- RELÓGIO CNN -->
 <script>
-function atualizarRelogio() {
-    const agora = new Date();
-    const hh = String(agora.getHours()).padStart(2,'0');
-    const mm = String(agora.getMinutes()).padStart(2,'0');
-    document.getElementById("relogio").innerHTML = hh + ":" + mm;
+let slides = document.querySelectorAll(".slide");
+let i = 0;
+function show(n) { slides.forEach((s,idx)=>s.style.opacity=idx===n?"1":"0"); }
+show(0);
+setInterval(()=>{ i=(i+1)%slides.length; show(i); },6000);
+
+function animTicker(){
+    const el=document.getElementById("ticker");
+    let pos=el.offsetWidth;
+    function mover(){
+        pos--; el.style.transform="translateX("+pos+"px)";
+        if(pos < -el.scrollWidth) pos=el.offsetWidth;
+        requestAnimationFrame(mover);
+    }
+    mover();
 }
-setInterval(atualizarRelogio, 1000);
+animTicker();
+
+function atualizarRelogio(){
+    const d=new Date();
+    document.getElementById("relogio").innerHTML =
+        String(d.getHours()).padStart(2,'0') + ":" +
+        String(d.getMinutes()).padStart(2,'0');
+}
+setInterval(atualizarRelogio,1000);
 atualizarRelogio();
 </script>
 
+<style>
+.banner-carousel { position:relative; }
+.slide { position:absolute; inset:0; opacity:0; transition:opacity 1s; }
+.titulo { font-size:1.2rem; font-weight:800; color:white; }
+.sub { font-size:.85rem; color:white; opacity:.9; }
+.mini { font-size:.7rem; opacity:.8; }
+.faixa-paralego { background:linear-gradient(90deg,#FF6400,#1a1a1a); display:flex; justify-content:center; color:white; }
+.faixa-mega { background:linear-gradient(135deg,#000,#1a1a1a 40%,#FF6400); display:flex; color:white; }
+.faixa-rbc { background:#000; display:flex; justify-content:center; }
+.faixa-paragon { background:#000; display:flex; color:white; }
+.faixa-parque { background:#000; display:flex; color:white; }
+.conteudo { display:flex; align-items:center; gap:25px; }
+</style>
